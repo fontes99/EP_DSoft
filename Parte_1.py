@@ -138,14 +138,13 @@ while i == 0:
         print('')
         print('Estoques negativos:')
         for j in negativo:
-            print(' -{0} '.format(j))
+            print(' -{0} : {1} '.format(j, estoque[j]['quantidade']))
         
         for l in estoque:
             soma += estoque[l]['valor'] * estoque[l]['quantidade']
         
         print('')
         print('Valor monetario: R${0}'.format(soma))
-        
                 
 
 # Escolha numero 0, Interromper programa ********************   FEITO   *******   
