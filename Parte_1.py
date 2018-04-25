@@ -1,4 +1,8 @@
 import json
+from firebase import firebase
+firebase = firebase.FirebaseApplication('https://memoria-5bd26.firebaseio.com/memoria-5bd26', None)
+result = firebase.get('https://memoria-5bd26.firebaseio.com/memoria-5bd26', None)
+estoque = result
 
 negativo = []
 
@@ -161,3 +165,5 @@ with open ('memoria.txt','w') as arquivo:
     arquivo.write(conteudo)
 
 print('Até mais')
+
+firebase.put('https://memoria-5bd26.firebaseio.com/', 'memoria-5bd26', estoque)
