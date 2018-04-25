@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 24 14:01:54 2018
 
-@author: pvfon
-"""
 import json
 
 
