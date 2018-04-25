@@ -1,7 +1,6 @@
 import json
 
 negativo = []
-soma = 0
 
 with open ('memoria.txt','r') as arquivo:
     conteudo = arquivo.read()
@@ -123,6 +122,8 @@ while i == 0:
 # Escolha numero 4, printar estoque *************************   FEITO   *******   
 
     elif escolha == '4':
+        
+        soma = 0
         
         print('')
         print('Estoques:')
