@@ -52,13 +52,12 @@ while i == 0:
                     
                 else:
                     b = False
+                    estoque[nome] = {'quantidade' : Qinicial, 'valor' : rs}
         
         else:
             print('Produto ja cadastrado')
         
                 
-                
-        estoque[nome] = {'quantidade' : Qinicial, 'valor' : rs}
         
         with open ('memoria.txt','w') as arquivo:
             conteudo = json.dumps(estoque, sort_keys=True, indent=4)
