@@ -1,4 +1,3 @@
-
 import json
 
 
@@ -21,32 +20,56 @@ while i == 0:
     
     
     
+# Escolha numero 1, adicionar item nao existente ****   FEITO   ***
+    
     if escolha == 1:
         
-        x = input('Nome do produto: ')
+        nome = input('Nome do produto: ')
         
-        a = True  
-        while a:
-            y = float(input('Quantidade inicial: '))
-            if y < 0:
-                print('A quantidade inicial não pode ser negativa.')
-            else:
-                a = False
+        if nome not in estoque:
+        
+            a = True  
+            while a:
+                Qinicial = float(input('Quantidade inicial: '))
+                
+                if Qinicial < 0:
+                    print('A quantidade inicial não pode ser negativa.')
+                    
+                else:
+                    a = False
+        
+        else:
+            print('Produto ja cadastrado')
+        
                 
                 
-        estoque[x] = {'quantidade' : y}
-        print(estoque)
-       
+        estoque[nome] = {'quantidade' : Qinicial}
+
+
+
+
+# Escolha numero 2, remover item ****************       
 
     elif escolha == 2:
-        print('bunda')
         
+        nome = input('Nome do produto: ')
+        
+        if nome not in estoque:
+            print('Elemento não encontrado')
+
+            
+# Escolha numero 3, alterar item ****************       
+
     elif escolha == 3:
         print('bunda')    
         
+# Escolha numero 4, printar estoque *********   FEITO   ***   
+
     elif escolha == 4:
-        print('bunda')
         
+        for k in estoque:
+            print('{0} : {1}'.format(k, estoque[k]['quantidade']))
+    
     elif escolha == 0:
         i = 1
     
