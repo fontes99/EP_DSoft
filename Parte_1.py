@@ -4,7 +4,7 @@ import json
 
 with open ('memoria.txt','r') as arquivo:
     conteudo = arquivo.read()
-    estoque = json.loads(conteudo)
+    estoque = json.loads(conteudo) 
     
 i = 0 
 
@@ -22,8 +22,22 @@ while i == 0:
     
     
     if escolha == 1:
-        print('oi')
-    
+        
+        x = input('Nome do produto: ')
+        
+        a = True  
+        while a:
+            y = float(input('Quantidade inicial: '))
+            if y < 0:
+                print('A quantidade inicial não pode ser negativa.')
+            else:
+                a = False
+                
+                
+        estoque[x] = {'quantidade' : y}
+        print(estoque)
+       
+
     elif escolha == 2:
         print('bunda')
         
@@ -38,12 +52,10 @@ while i == 0:
     
     else:
         print('Escolha inválida')
-        print('Sabe ler não? É de 0 a 4 Cabaço...')
     
-
-with open ('Arquivo.txt','w') as arquivo:
+    
+with open ('memoria.txt','w') as arquivo:
     conteudo = json.dumps(estoque, sort_keys=True, indent=4)
     arquivo.write(conteudo)
 
 print('Até mais')
-
