@@ -18,13 +18,13 @@ while i == 0:
     print('3 - alterar item')
     print('4 - imprimir estoque')
     
-    escolha = int(input('Faça sua escolha: '))  
+    escolha = input('Faça sua escolha: ')
     
     
     
 # Escolha numero 1, adicionar item nao existente ************   FEITO   *******
     
-    if escolha == 1:
+    if escolha == '1':
         
         produto = input('Nome do produto: ')
         nome = produto.lower()
@@ -68,7 +68,7 @@ while i == 0:
 
 # Escolha numero 2, remover item ****************************   FEITO   *******     
 
-    elif escolha == 2:
+    elif escolha == '2':
         
         produto = input('Nome do produto: ')
         nome = produto.lower()
@@ -86,7 +86,7 @@ while i == 0:
             
 # Escolha numero 3, alterar item ****************************   FEITO   *******      
 
-    elif escolha == 3:
+    elif escolha == '3':
         
         produto = input('Nome do produto: ')
         nome = produto.lower()
@@ -122,7 +122,7 @@ while i == 0:
         
 # Escolha numero 4, printar estoque *************************   FEITO   *******   
 
-    elif escolha == 4:
+    elif escolha == '4':
         
         print('')
         print('Estoques:')
@@ -149,7 +149,7 @@ while i == 0:
 
 # Escolha numero 0, Interromper programa ********************   FEITO   *******   
 
-    elif escolha == 0:
+    elif escolha == '0':
         i = 1
     
     else:
