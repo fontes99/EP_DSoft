@@ -22,7 +22,7 @@ while i == 0:
     
     
     
-# Escolha numero 1, adicionar item nao existente ************   FEITO   *******
+# Escolha numero 1, adicionar item nao existente ****   FEITO   ***
     
     if escolha == 1:
         
@@ -59,15 +59,18 @@ while i == 0:
                 
                 
         estoque[nome] = {'quantidade' : Qinicial, 'valor' : rs}
+<<<<<<< HEAD
         
         with open ('memoria.txt','w') as arquivo:
             conteudo = json.dumps(estoque, sort_keys=True, indent=4)
             arquivo.write(conteudo)
+=======
+>>>>>>> 54a89d16d45bc0fad8cf2fd9cc629eb30c91ec95
 
 
 
 
-# Escolha numero 2, remover item ****************************   FEITO   *******     
+# Escolha numero 2, remover item **********   FEITO   ***     
 
     elif escolha == 2:
         
@@ -85,7 +88,7 @@ while i == 0:
             conteudo = json.dumps(estoque, sort_keys=True, indent=4)
             arquivo.write(conteudo)   
             
-# Escolha numero 3, alterar item ****************************   FEITO   *******      
+# Escolha numero 3, alterar item **********   FEITO   ***      
 
     elif escolha == 3:
         
@@ -121,17 +124,25 @@ while i == 0:
             conteudo = json.dumps(estoque, sort_keys=True, indent=4)
             arquivo.write(conteudo)
         
-# Escolha numero 4, printar estoque *************************   FEITO   *******   
+# Escolha numero 4, printar estoque *********   FEITO   ***   
 
     elif escolha == 4:
         
         print('')
         print('Estoques:')
+<<<<<<< HEAD
         for k in estoque:
             if estoque[k]['quantidade'] >= 0:
                 print(' -{0} : {1}'.format(k, estoque[k]['quantidade']))
          
         for k in estoque:
+=======
+        for k in estoque:
+            if estoque[k]['quantidade'] >= 0:
+                print(' -{0} : {1}'.format(k, estoque[k]['quantidade']))
+         
+        for k in estoque:
+>>>>>>> 54a89d16d45bc0fad8cf2fd9cc629eb30c91ec95
             if estoque[k]['quantidade'] < 0:
                     negativo.append(nome)
                     
@@ -145,10 +156,13 @@ while i == 0:
         
         print('')
         print('Valor monetario: R${0}'.format(soma))
+<<<<<<< HEAD
         
+=======
+>>>>>>> 54a89d16d45bc0fad8cf2fd9cc629eb30c91ec95
                 
 
-# Escolha numero 0, Interromper programa ********************   FEITO   *******   
+# Escolha numero 0, Interromper programa *******   FEITO   ****   
 
     elif escolha == 0:
         i = 1
